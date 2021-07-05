@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+@font-face {
+    font-family: 'neon_tubes_2regular';
+    src: url('/Fonts/neontubes2-webfont.woff2') format('woff2'),
+         url('/Fonts/neontubes2-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.neontitle{
+    font-family : neon_tubes_2regular;
+    margin: 0;
+    color: #fff0f0;
+    font-size: 10vw;
+    text-shadow: 0 0 40px #ff0404, 0 0 20px #ff0404;
+    font-weight: 100;
+    text-align:center;
+}
+#main{
+    position:absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 100vw;
+
+}
+.horizontalcontaier{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+}
+
+.motd{
+    font-family : Teko;
+    font-size: 3vw;
+    text-align: left;
+    color: #000000;
+    margin: 0;
+}
+
+.info{
+    font-family : Teko;
+    font-size: 3vw;
+    text-align: right;
+    color: #000000;
+    margin: 0;
+}
+
+.mes{
+    position: relative;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin-left: 0px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f8e896;
+    width: 80vw;
+    height: auto;
+    border: 1px solid #97C6E3;
+    border-radius: 10px;
+}
