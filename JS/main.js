@@ -8,7 +8,6 @@ function get_messages(){
 get_messages().then(data => create_items(data))
 
 function create_items(data){
-    console.log(data[1])
     const texts = document.getElementById("texts");
     for (let i = 0; i < data.length; i++) 
     {
