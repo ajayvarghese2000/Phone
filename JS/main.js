@@ -49,6 +49,7 @@ function reset(){
         alert("Enter a Password")
     }
     else{
+        password = CryptoJS.MD5(password).toString();
         get_messages(password).then(data => success_check(data))
     }
 }
