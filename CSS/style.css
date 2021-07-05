@@ -60,3 +60,39 @@
     border: 1px solid #97C6E3;
     border-radius: 10px;
 }
+
+.login{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+input[type=password], select {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: relative;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+input[type=submit]{
+    position: relative;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}

@@ -1,11 +1,11 @@
-function get_messages(){
+function get_messages(password){
     return new Promise((resolve, reject) =>{
-        url = 'https://ajayvhd.pythonanywhere.com/mes'
+        url = 'https://ajayvhd.pythonanywhere.com/mes/' + password
         fetch(url).then(response => response.json()).then(data => resolve(data));
     })
 }
 
-get_messages().then(data => create_items(data))
+//get_messages().then(data => create_items(data))
 
 function create_items(data){
     const texts = document.getElementById("texts");
@@ -40,4 +40,15 @@ function timeConverter(UNIX_timestamp){
     var d = new Date(0); // The 0 there is the key, which sets the date to the epoch
     d.setUTCSeconds(UNIX_timestamp/1000)
     return d.toLocaleString()
-  }
+}
+
+function reset(){
+    const Main = document.getElementById("texts");
+    Main.innerHTML = "";
+    password = document.getElementById("password").value;
+    get_messages(password).then(data => create_items(data))
+    
+
+}
+
+var password = "inspectelementnerd";
