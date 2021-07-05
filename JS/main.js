@@ -9,7 +9,6 @@ function get_messages(password){
 
 function create_items(data){
     const texts = document.getElementById("texts");
-    console.log(data)
     for (let i = 0; i < data.length; i++) 
     {
         const diff = data.length - (1 + i);
@@ -46,9 +45,30 @@ function reset(){
     const Main = document.getElementById("texts");
     Main.innerHTML = "";
     password = document.getElementById("password").value;
-    get_messages(password).then(data => create_items(data))
-    
+    if (password == "") {
+        alert("Enter a Password")
+    }
+    else{
+        get_messages(password).then(data => success_check(data))
+    }
+}
+
+function success_check(data){
+    console.log(data)
+    if(data["success"] == false)
+    {
+        document.getElementById("password").value = "";
+        alert("Wrong Password");
+    }
+    else
+    {
+        var element = document.getElementById("password");
+        element.style.display = "none";
+        var button = document.getElementById("button");
+        button.value = "Refresh"
+        create_items(data)
+    }
 
 }
 
-var password = "inspectelementnerd";
+var password = "inspect_element_nerd";
