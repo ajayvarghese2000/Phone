@@ -9,6 +9,7 @@ get_messages().then(data => create_items(data))
 
 function create_items(data){
     const texts = document.getElementById("texts");
+    console.log(data)
     for (let i = 0; i < data.length; i++) 
     {
         const diff = data.length - (1 + i);
@@ -16,7 +17,7 @@ function create_items(data){
         Div.classList = "mes"
         
         const p1 = document.createElement("p");
-        const Message = document.createTextNode(data[diff]["message"]);
+        const Message = document.createTextNode(String(data[diff]["message"]));
         p1.appendChild(Message)
         p1.classList = "motd"
 
