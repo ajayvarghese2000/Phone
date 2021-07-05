@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 @font-face {
     font-family: 'neon_tubes_2regular';
-    src: url('CSS/Fonts/neontubes2-webfont.woff2') format('woff2'),
-         url('CSS/Fonts/neontubes2-webfont.woff2') format('woff');
+    src: url('./Fonts/neontubes2-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-
 }
 .neontitle{
     font-family : neon_tubes_2regular;
