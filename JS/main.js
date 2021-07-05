@@ -12,17 +12,18 @@ function create_items(data){
     const texts = document.getElementById("texts");
     for (let i = 0; i < data.length; i++) 
     {
+        const diff = data.length - (1 + i);
         const Div = document.createElement("div");
         Div.classList = "mes"
         
         const p1 = document.createElement("p");
-        const Message = document.createTextNode(data[i]["message"]);
+        const Message = document.createTextNode(data[diff]["message"]);
         p1.appendChild(Message)
         p1.classList = "motd"
 
-        formattedTime = timeConverter(data[i]["sent_timestamp"])
+        formattedTime = timeConverter(data[diff]["sent_timestamp"])
         const p2 = document.createElement("p");
-        const SenderInfo = document.createTextNode(formattedTime + " " + data[i]["from"]);
+        const SenderInfo = document.createTextNode(formattedTime + " " + data[diff]["from"]);
         p2.appendChild(SenderInfo)
         p2.classList = "info"
 
