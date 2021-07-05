@@ -1,35 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 @font-face {
     font-family: 'neon_tubes_2regular';
     src: url('./Fonts/neontubes2-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
-.neontitle{
-    font-family : neon_tubes_2regular;
+
+.neontitle {
+    font-family: neon_tubes_2regular;
     margin: 0;
     color: #fff0f0;
     font-size: 10vw;
     text-shadow: 0 0 40px #ff0404, 0 0 20px #ff0404;
     font-weight: 100;
-    text-align:center;
+    text-align: center;
 }
-#main{
-    position:absolute;
+
+#main {
+    position: absolute;
     top: 5%;
     left: 50%;
     transform: translate(-50%, 0%);
     width: 100vw;
 
 }
-.horizontalcontaier{
+
+.horizontalcontaier {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    
+
 }
 
-.motd{
+.motd {
     font-family: 'Open Sans';
     font-size: 3vw;
     text-align: left;
@@ -37,7 +41,7 @@
     margin: 0;
 }
 
-.info{
+.info {
     font-family: 'Open Sans';
     font-size: 2vw;
     text-align: right;
@@ -45,11 +49,10 @@
     margin: 0;
 }
 
-.mes{
+.mes {
     position: relative;
+    align-self: center;
     top: 5%;
-    left: 50%;
-    transform: translate(-50%, 0%);
     margin-left: 0px;
     margin-bottom: 10px;
     margin-top: 10px;
@@ -59,14 +62,18 @@
     height: auto;
     border: 1px solid #97C6E3;
     border-radius: 20px;
+    animation-name: fadeInUp;
+    animation-duration: 2s;
 }
 
-.login{
+.login {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
 }
-input[type=password], select {
+
+input[type=password],
+select {
     width: 70%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -79,7 +86,7 @@ input[type=password], select {
     transform: translate(-50%, 0%);
 }
 
-input[type=submit]{
+input[type=submit] {
     position: relative;
     top: 5%;
     left: 50%;
@@ -93,6 +100,20 @@ input[type=submit]{
     border-radius: 10px;
     cursor: pointer;
 }
+
 input[type=submit]:hover {
     background-color: #45a049;
 }
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0%, 100%, 0)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateZ(0)
+    }
+}
+
