@@ -1,6 +1,6 @@
 function get_messages(password) {
     return new Promise((resolve, reject) => {
-        url = 'http://thebigserver.xyz/mes/' + password
+        url = 'https://ajayvhd.pythonanywhere.com/mes/' + password
         fetch(url).then(response => response.json()).then(data => resolve(data));
     })
 }
