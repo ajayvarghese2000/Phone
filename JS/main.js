@@ -8,7 +8,7 @@ function get_messages(password) {
 function create_items(data) {
     const texts = document.getElementById("texts");
     for (let i = 0; i < data.length; i++) {
-        const diff = data.length - (1 + i);
+        const diff = i //data.length - (1 + i);
         const Div = document.createElement("div");
         Div.classList = "mes"
 
